@@ -1,0 +1,770 @@
+.container{
+    width: 100%;
+    background:#111111;
+}
+
+.visual-container{
+    width: 100%;
+    height: calc(100vh - 70px);
+    min-height: 610px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+
+    .visual-list{
+        width: 100%;
+        height: 100%;
+
+        li{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            background: url(../../images/main-visual06.jpg) no-repeat center center / cover;
+
+            .visual-text{
+                padding-left: 338px;
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                padding-top:50px ;
+
+                &:after{
+                    content: "";
+                    width: 338px;
+                    height: 70px;
+                    box-sizing: border-box;
+                    border-top: solid 3px $textWhite;
+                    border-bottom: solid 3px $textWhite;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0px;
+                }
+
+                .sub-text{
+                    font-size: 20px;
+                    color: $textWhite;
+                    font-family: $text;
+                    font-weight: 100;
+                }
+                .title{
+                    font-size: 80px;
+                    color: $textWhite;
+                    margin: 14px 0px;
+                    font-weight: 300;
+                }
+
+                .text-link{
+                    position: absolute;
+                    bottom: 23%;
+                    display: flex;
+                    gap: 60px;
+                    a{
+                        color: $textWhite;
+                        font-size: 16px;
+                        font-family: $text;
+                        display: flex;
+                        gap: 8px;
+
+                        &:after{
+                            content: "";
+                            width: 7px;
+                            height: 13px;
+                            display: block;
+                            background: url(../../images/ico-arrow-white.png) no-repeat center center / 7px;
+                            transform: rotate(180deg); 
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }/*visual-list*/
+
+    .visual-control{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 13.8%;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .dot-list{
+            display: flex;
+            gap: 20px;
+            li{
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: rgba(255,255,255,0.7);
+                border:solid 2px transparent;
+                background-clip: padding-box;
+                /*
+                background-clip
+                배경 이미지나 배경 컬러를 영역 어디까지 설정하는지에 정하는 속성
+                border-box : 테두리 영역과 그 안쪽까지 채움
+                content-box : 컨텐츠 내용만 영역을 채움
+                padding-box : 안쪽 여백 영역만큼만 영역을 채움
+                
+                */
+
+                &.on{
+                    border-color: $textWhite;
+                    background: transparent;
+                }
+            }
+        }
+
+        .pause-btn{
+            width: 24px;
+            height: 24px;
+            font-size: 24px;
+            color: $textWhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+            border:none;
+
+            .bx-play{
+                display: none;
+            }
+
+        }
+    }
+}
+
+.model-container{
+    padding: 200px 0px 270px 200px;
+    .title-box{
+        margin-bottom: 30px;
+        .title{
+            font-size: 42px;
+            color: $textWhite;
+            font-weight: 300;
+        }
+        .text{
+            margin-top: 30px;
+            font-size: 16px;
+            color: $textWhite;
+        }
+    }
+    .category{
+        width: 300px;
+        margin-bottom: 90px;
+        border-bottom: solid 1px $textWhite;
+        a{
+            padding: 12px 0px 12px 10px;
+            color: $textWhite;
+            font-size: 16px;
+            display: flex;
+            &:after{
+                content: "";
+                width: 13px;
+                height: 9px;
+                background: url(../../images/w-ico-arrow-top.png) no-repeat center center / 12px;
+                margin-left: auto;
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .category-m{
+        width: 100%;
+        margin: 50px 0px;
+        padding: 0px 30px;
+        box-sizing: border-box;
+        display: none;
+        .category-list{
+            display: flex;
+            li{
+                width: 33%;
+                border-bottom: solid 1px $textColor;
+
+                a{
+                    padding: 20px 0px;
+                    display: flex;
+                    justify-content: center;
+                    color: $textColor;
+                    font-size: 18px;
+                }
+                &.on{
+                    border-color: #ffffff;
+                    a{
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+    .model-wrapper{
+        .model-list{
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            li{
+                background: #151515;
+                padding: 40px;
+                position: relative;
+                top: 0px;
+                left: 0px;
+                .content-box{
+                    position: relative;
+                    top: 0px;
+                    left: 0px;
+                    margin-bottom: 50px;
+                    .text{
+                        color: $textColor;
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                        min-height: 14px;
+                        transition: 0.5s;
+                    }
+                    .title{
+                        color: $textColor;
+                        font-size: 30px;
+                        transition: 0.5s;
+                        font-weight: 300;
+                    }
+                    .icon-list{
+                        position: absolute;
+                        right: 0px;
+                        bottom: 0px;
+                        display: flex;
+                        gap: 10px;
+                    }
+                }
+                &:nth-of-type(1){
+                    .content-box{
+                        .text{
+                            position: absolute;
+                            left: 0px;
+                            bottom: 0px;
+                            margin-bottom: 0px;
+                        }
+                        .title{
+                            padding-bottom: 30px;
+                            
+                        }
+                    }
+                }
+
+                .dic-btn{
+                    width: 100%;
+                    height: 54px;
+                    box-sizing: border-box;
+                    border: solid 2px $textWhite;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $textWhite;
+                    position: relative;
+                    top: 0px;
+                    left: 0px;
+                    margin-top: 40px;
+                    transition: 0.5s;
+                    z-index: 1;
+
+                    &:after{
+                        content: "";
+                        width: 0px;
+                        height: 100%;
+                        background: $textWhite;
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        transition: 0.5s;
+                        z-index: -1;
+                    }
+                    &:hover{
+                        color: #151515;
+                    }
+                    &:hover:after{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .dot-wrapper{
+            display: flex;
+            justify-content: center;
+            .dot-list{
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                li{
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: rgba(255,255,255,0.7);
+                    border: solid 2px transparent;
+                    background-clip: padding-box;
+                    &.on{
+                        background: transparent;
+                        border-color: $textWhite;
+                    }
+                }
+            }
+        }
+    }
+}
+.icon-container{
+    padding: 0px 100px 250px;
+
+    .icon-list{
+        display: flex;
+        justify-content: center;
+        li{
+            flex-grow: 1;
+            
+            a{
+                display: flex;
+                color: $textWhite;
+                background: url(../../images/quitation.gif) no-repeat center top;
+                padding-top: 80px;
+                justify-content: center;
+                font-size: 16px;
+                
+            }
+            .icon-sales{
+                background-image: url(../../images/sales.gif);
+            }
+            .icon-drive{
+                background-image: url(../../images/drive.gif);
+            }
+            .icon-catalog{
+                background-image: url(../../images/catalog.gif);
+            }
+        }
+    }
+}
+
+.award-container{
+    padding-bottom: 250px;
+    .title-box{
+        padding-left: 330px;
+        margin-bottom: 80px;
+        .title{
+            font-size: 42px;
+            color: $textWhite;
+            font-weight: 300;
+        }
+    }
+    .award-wrapper{
+        position: relative;
+        top: 0px;
+        left: 0px;
+        .award-dot{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: end;
+            flex-direction: column;
+            
+            .award-dot-list{
+                padding-left: 330px;
+                display: flex;
+                padding-right: 140px;
+                li{
+                    border-top: solid 4px $textColor;
+                    padding: 14px 0px;
+                    width: calc(100% / 6);
+                    a{
+                        display: block;
+                        color: $textColor;
+                        font-size: 14px;
+                        width: 80%;
+                        letter-spacing: 0.5px;
+                        line-height: 1.5;
+                    }
+                }
+            }
+            .pause-btn{
+                width: 60px;
+                height: 60px;
+                background: url(../../images/ico-pause-default.png) no-repeat center center;
+                position: absolute;
+                bottom: 0px;
+                right: 70px;
+                border: solid 2px $textColor;
+                border-radius: 50%;
+            }
+            .text-box{
+                width: 520px;
+                position: absolute;
+                left: 0px;
+                bottom: 150px;
+                padding-left: 330px;
+                .content-title{
+                    font-size: 42px;
+                    color: $textWhite;
+                    margin-bottom: 20px;
+                    font-weight: 300;
+                    line-height: 1.5;
+                    word-break: keep-all;
+                    span{
+                        display: block;
+                        font-size: 30px;
+                    }
+
+                }
+                .text{
+                    color: $textWhite;
+                    font-size: 16px;
+                    line-height: 1.8;
+                }
+            }
+        }
+    }
+}
+
+.option-container{
+    padding-bottom: 230px;
+    .opt-list{
+        display: flex;
+        gap: 40px;
+        .opt-item{
+            position: relative;
+            top: 0px;
+            left: 0px;
+            background: url(../../images/space.jpg) no-repeat center center / cover;
+            padding-top: 27.55%;
+            height: 0px;
+            flex-grow: 1;
+            &:after{
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                background: rgba(0,0,0,0.5);
+
+            }
+            .text-box{
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                padding: 60px;
+                width: 500px;
+                z-index: 2;
+                .title{
+                    color: $textWhite;
+                    font-size: 26px;
+                    margin-bottom: 20px;
+                }
+                .text{
+                    color: $textWhite;
+                    font-size: 14px;
+                    line-height: 1.8;
+                    font-family: $text;
+                    margin-bottom: 20px;
+                }
+                .link-btn{
+                    color: $textWhite;
+                    font-size: 16px;
+                    span{
+                        position: relative;
+                        &:before{
+                            content: "";
+                            width: 100%;
+                            height: 1px;
+                            background: $textWhite;
+                            display: block;
+                            position: absolute;
+                            left: 0px;
+                            bottom: -5px;
+                        }
+                        &:after{
+                            content: "";
+                            width: 0px;
+                            height: 1px;
+                            background: $textWhite;
+                            display: block;
+                            position: absolute;
+                            left: 0px;
+                            bottom: -5px;
+                            transition: 0.5s;
+                        }
+                    }
+                    &:hover span:before{
+                        display: none;
+                    }
+                    &:hover span:after{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .trip{
+            background-image: url(../../images/roadtrip.jpg);
+        }
+    }
+}
+.event-container{
+    width: 100%;
+    height: 0px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background: url(../../images/event.jpg) no-repeat center center / cover;
+    padding-top: 50%;
+    margin-bottom: 250px;
+
+    .text-box{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 140px;
+        .title{
+            color: $textWhite;
+            font-size: 54px;
+            margin-bottom: 54px;
+            font-weight: 300;
+        }
+        .text{
+            font-size: 26px;
+            margin-bottom: 26px;
+            color: $textWhite;
+            font-weight: 300;
+        }
+        .dic-btn{
+            width: 240px;
+            height: 56px;
+            border:solid 2px $textWhite;
+            color: $textWhite;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+.sns-container{
+    padding: 160px 0px 120px;
+    background: $textWhite;
+    .title-box{
+        text-align: center;
+        margin-bottom: 70px;
+        .sub-title{
+            color: $textBlack;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .title{
+            font-size: 54px;
+            color: $textBlack;
+            font-weight: 300;
+        }
+    }
+    .sns-list{
+        display: flex;
+        gap: 6px;
+        li{
+            position: relative;
+            width: 100%;
+            
+            
+            .sns-img{
+                position: relative;
+                top: 0px;
+                left: 0px;
+                overflow: hidden;
+                padding-top: 100%;
+                img{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    transition: 0.5s;
+                }
+            }
+            &:after{
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0);
+                transition: 0.5s;
+                z-index: 1;
+            }
+
+            &:hover:after{
+                background: rgba(0,0,0,0.7);
+            }
+            &:hover .sns-img img{
+                transform: translate(-50%,-50%) scale(1.2)
+            }
+            &:hover .text-box{
+                opacity: 1;
+            }
+
+            .text-box{
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                z-index: 2;
+                padding: 0px 40px 30px 60px;
+                opacity: 0;
+                transition: 0.2s;
+                >.bx{
+                    font-size: 24px;
+                    color: $textWhite;
+                    position: absolute;
+                    top: -10px;
+                    left: 30px;
+                }
+                .text{
+                    color: $textWhite;
+                    margin-bottom: 12px;
+                    font-size: 14px;
+                    line-height: 1.5;
+                    @include ellipse(28px, 2)
+                }
+                .link-btn{
+                    font-size: 14px;
+                    color: $textWhite;
+                    position: relative;
+                    top: 0px;
+                    left: 0px;
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    .bx{
+                        font-size: 16px;
+                        position: relative;
+                        top: -3px;
+                    }
+                    span{
+                        position: relative;
+                        top: 0px;
+                        left: 0px;
+                        &:before,
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            bottom: -2px;
+                            left: 0px;
+                            width: 100%;
+                            height: 1px;
+                            background: $textWhite;
+                        }
+                        &:after{
+                            width: 0px;
+                            transition: 0.5s;
+                        }
+                    }
+                    &:hover span:before{
+                        display: none;
+                    }
+                    &:hover span:after{
+                        width: 100%;
+                    }
+                }
+            }
+
+
+
+        }
+    }
+    .more-btn{
+        width: 240px;
+        height: 60px;
+        border: solid 1px #111111;
+        padding: 0px 16px 0px 26px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #111111;
+        background: transparent;
+
+        margin: 60px auto 0px;
+    }
+}
+
+.more-container{
+    background-color: $textWhite;
+    padding-bottom: 130px;
+    .title-box{
+        margin-bottom: 40px;
+        text-align: center;
+        .title{
+            font-size: 30px;
+            font-weight: 300;
+        }
+    }
+    .more-list{
+        display: flex;
+        gap: 40px;
+        li{
+            width: 33%;
+            .more-img{
+                margin-bottom: 24px;
+            }
+            .text-box{
+                .title{
+                    font-size: 18px;
+                    margin-bottom: 18px;
+                    font-weight: 300;
+                }
+                .text{
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                    line-height: 1.5;
+                }
+                
+            }
+            .more-link{
+                font-size: 16px;
+                color: $textBlack;
+                &:hover span:before{
+                    width: 0%;
+                }
+                &:hover span:after{
+                    width: 100%;
+                }
+                span{
+                    position: relative;
+                    top: 0px;
+                    left: 0px;
+                    &:before{
+                        content: "";
+                        display: inline-block;
+                        width: 100%;
+                        height: 1px;
+                        background: $textBlack;
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0px;
+                    }
+                    &:after{
+                        content: "";
+                        display: inline-block;
+                        width: 0%;
+                        height: 1px;
+                        background: $textBlack;
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0px;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

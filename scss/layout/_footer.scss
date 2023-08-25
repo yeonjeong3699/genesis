@@ -1,0 +1,271 @@
+.f-container{
+    background-color: #111111;
+    .inner{
+        padding: 0px 140px;
+    }
+    .f-sns{
+        border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+        padding: 20px 0px;
+        .inner{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .f-sns-left{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                span{
+                    color: $textWhite;
+                    font-size: 16px;
+                    font-family: $text;
+                    letter-spacing: -0.5px;
+                    //text-transform: capitalize;
+                    //text-transform : 텍스트 대, 소문자 관련
+                    //capitalize : 첫글자만 대문자
+                }
+                .f-sns-list{
+                    display: flex;
+                    gap: 20px;
+                    li{
+                        &:hover a{
+                            color: rgba(255, 255, 255, 1);
+                        }
+                        a{
+                            font-size: 18px;
+                            color: rgba(255, 255, 255, 0.5);
+                            transition: 0.5s;
+                        }
+                    }
+                }
+                .f-sns-btn{
+                    font-size: 20px;
+                    border: none;
+                    background: transparent;
+                    color: $textWhite;
+                    display: none;
+                }
+            }//f-sns-left
+            .f-top-btn{
+                color: $textWhite;
+                font-size: 16px;
+                font-family: $text;
+                letter-spacing: -0.5px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                i{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .f-notice{
+        padding: 30px 0px;
+        .inner{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            .notice-list{
+                width: 100%;
+                a{
+                    display: block;
+                    color: $textWhite;
+                    font-size: 14px;
+                    letter-spacing: -0.5px;
+                }
+            }
+            .notice-controls{
+                display: flex;
+                gap: 15px;
+                align-items: center;
+                button{
+                    background: transparent;
+                    border: none;
+                    font-size: 25px;
+                    color: $textWhite;
+                    padding: 0px;
+                }
+            }
+        }
+    }
+    .f-sitemap{
+        background: #151515;
+        padding: 90px 0px;
+        .inner{
+            .f-sitemap-list{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 40px 0px;
+                .item{
+                    width: 25%;
+                    strong{
+                        font-size: 16px;
+                        color: $textWhite;
+                        margin-bottom: 20px;
+                        display: inline-block;
+                    }
+                    .sitemap-btn{
+                        display: none;
+                        width: 100%;
+                        color: $textWhite;
+                        padding: 20px 30px;
+                        box-sizing: border-box;
+                        justify-content: space-between;
+                        border-top: solid 1px rgba(255, 255, 255, 0.1);
+                        font-size: 14px;
+                        .bx{
+                            font-size: 22px;
+                        }
+                    }
+                    .sub-menu{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        li{
+                            &:hover a{
+                                color: rgba(255, 255, 255, 1);
+                            }
+                            a{
+                                display: block;
+                                color: rgba(255, 255, 255, 0.7);
+                                font-size: 14px;
+                                letter-spacing: -0.5px;
+                                transition: 0.5s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .f-company{
+        padding: 30px 0px;
+        border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+        .inner{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .f-company-list{
+                display: flex;
+                align-items: center;
+                li{
+                    padding: 0px 20px;
+                    position: relative;
+                    top: 0px;
+                    left: 0px;
+                    &:first-of-type{
+                        padding-left: 0px;
+                    }
+                    &:last-of-type{
+                        padding-right: 0px;
+                    }
+                    &:after{
+                        content: "";
+                        display: block;
+                        width: 1px;
+                        height: 15px;
+                        background: rgba(255, 255, 255, 0.2);
+                        position: absolute;
+                        top: -3px;
+                        right: -2px;
+                    }
+                    &:last-of-type:after{
+                        display: none;
+                    }
+                    a{
+                        color: #dddddd;
+                        font-size: 14px;
+                    }
+                }
+                .privacy a{
+                    color: orange;
+                }
+            }
+            .f-company-sns{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                li{
+                    a{
+                        font-size: 28px;
+                        color: $textWhite;
+                        padding: 0px 10px;
+                    }
+                }
+            }
+        }
+    }
+    .f-genesis{
+        padding: 30px 0px;
+        border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+        .inner{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .f-genesis-list{
+                display: flex;
+                gap: 20px 40px;
+                flex-wrap: wrap;
+                align-items: center;
+                li a{
+                    display: flex;
+                    color: $textWhite;
+                    font-size: 14px;
+                    align-items: center;
+                    gap: 10px;
+                    .bx{
+                        font-size: 16px;
+                    }
+                }
+            }
+            .f-lang{
+                display: flex;
+                align-self: center;
+                a{
+                    display: flex;
+                    width: 80px;
+                    height: 36px;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 15px;
+                    letter-spacing: 0px;
+                    font-weight: 700;
+                }
+                .eng{
+                    color: $textWhite;
+                    background: #222222;
+                }
+                .kor{
+                    color: #222222;
+                    background: $textWhite;
+                }
+            }
+        }
+    }
+    .f-copy{
+        padding: 50px 0px;
+        .inner{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            .f-img{
+                position: absolute;
+                top: 0px;
+                right: 140px;
+            }
+            .f-logo{
+                width: 130px;
+            }
+            .copy{
+                color: #dddddd;
+                font-size: 14px;
+                line-height: 1.5;
+                text-align: center;
+                letter-spacing: -0.5px;
+            }
+        }
+
+    }
+}
